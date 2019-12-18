@@ -2,6 +2,7 @@
 #define avl_tree
 
 #include <stdlib.h>
+#include <stdbool.h>
 
 struct node
 {
@@ -16,5 +17,6 @@ typedef struct node* NodeP;
 
 NodeP CreateTree();
 NodeP CreateTreeWithData(int data);
+bool IsExistsData(NodeP root, int data);
 
 #endif
