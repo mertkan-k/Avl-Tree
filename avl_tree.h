@@ -19,5 +19,6 @@ NodeP CreateTree();
 NodeP CreateTreeWithData(int data);
 bool IsExistsData(NodeP root, int data);
 void AddData(NodeP root, int data);
+bool FindData(NodeP root, int data);
 
 #endif

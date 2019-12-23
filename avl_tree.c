@@ -44,3 +44,17 @@ void AddData(NodeP root, int data)
 
 	*p = CreateTreeWithData(data);
 }
+
+bool FindData(NodeP root, int data)
+{
+	NodeP* p = &root;
+
+	while (*p != NULL)
+	{
+		if ((*p)->data == data) return true;
+		else if (data < (*p)->data) p = &((*p)->left);
+		else p = &((*p)->right);
+	}
+
+	return false;
+}
