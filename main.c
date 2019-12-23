@@ -9,6 +9,8 @@ int main(){
 	AddData(n, 25);
 	AddData(n, 6);
 	AddData(n, 12);
+	AddData(n, 23);
+	AddData(n, 26);
 	/**
 	 *        10
 	 *    5       20
@@ -18,6 +20,7 @@ int main(){
 
 	bool f1 = FindData(n, 4);
 	bool f2 = FindData(n, 3);
+	bool f3 = FindData(n, 23);
 
 	return 0;
 }
