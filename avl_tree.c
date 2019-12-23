@@ -21,32 +21,33 @@ NodeP CreateTreeWithData(int data)
 
 void AddData(NodeP root, int data)
 {
-	NodeP* p = &root;
+	NodeP* p = Find(root, data);
 
-	while (*p != NULL)
+	if (*p ==NULL)
 	{
-		if ((*p)->data == data) return;
-		else if (data < (*p)->data) p = &((*p)->left);
-		else p = &((*p)->right);
+		*p = CreateTreeWithData(data);
+
+		RefreshHeight(root);
 	}
-
-	*p = CreateTreeWithData(data);
-
-	RefreshHeight(root);
 }
 
-bool FindData(NodeP root, int data)
+NodeP* Find(NodeP root, int data)
 {
 	NodeP* p = &root;
 
 	while (*p != NULL)
 	{
-		if ((*p)->data == data) return true;
+		if ((*p)->data == data) break;
 		else if (data < (*p)->data) p = &((*p)->left);
 		else p = &((*p)->right);
 	}
 
-	return false;
+	return p;
+}
+
+bool FindData(NodeP root, int data)
+{
+	return (*Find(root, data) != NULL);
 }
 
 int RefreshHeight(NodeP root)

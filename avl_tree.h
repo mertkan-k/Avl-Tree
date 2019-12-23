@@ -19,6 +19,7 @@ typedef struct node* NodeP;
 NodeP CreateTree();
 NodeP CreateTreeWithData(int data);
 void AddData(NodeP root, int data);
+NodeP* Find(NodeP root, int data);
 bool FindData(NodeP root, int data);
 int RefreshHeight(NodeP root);
 
