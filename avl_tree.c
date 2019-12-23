@@ -30,3 +30,17 @@ bool IsExistsData(NodeP root, int data)
 
 	return false;
 }
+
+void AddData(NodeP root, int data)
+{
+	NodeP* p = &root;
+
+	while (*p != NULL)
+	{
+		if ((*p)->data == data) return;
+		else if (data < (*p)->data) p = &((*p)->left);
+		else p = &((*p)->right);
+	}
+
+	*p = CreateTreeWithData(data);
+}

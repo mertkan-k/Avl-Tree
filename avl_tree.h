@@ -18,5 +18,6 @@ typedef struct node* NodeP;
 NodeP CreateTree();
 NodeP CreateTreeWithData(int data);
 bool IsExistsData(NodeP root, int data);
+void AddData(NodeP root, int data);
 
 #endif
