@@ -1,6 +1,7 @@
 #ifndef avl_tree
 #define avl_tree
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
@@ -20,5 +21,6 @@ NodeP CreateTreeWithData(int data);
 bool IsExistsData(NodeP root, int data);
 void AddData(NodeP root, int data);
 bool FindData(NodeP root, int data);
+int RefreshHeight(NodeP root);
 
 #endif

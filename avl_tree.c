@@ -58,3 +58,14 @@ bool FindData(NodeP root, int data)
 
 	return false;
 }
+
+int RefreshHeight(NodeP root)
+{
+	if (root == NULL) return 0;
+
+	int lMax = RefreshHeight(root->left)+1;
+	int rMax = RefreshHeight(root->right)+1;
+
+	if (lMax >= rMax) return (root->height = lMax);
+	else return (root->height = rMax);
+}
