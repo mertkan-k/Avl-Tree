@@ -13,12 +13,11 @@ int main(){
 	 *        10
 	 *    5       20
 	 *  3   6   12  25
+	 *             23 26
 	*/
 
 	bool f1 = FindData(n, 4);
 	bool f2 = FindData(n, 3);
-
-	RefreshHeight(n);
 
 	return 0;
 }

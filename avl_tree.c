@@ -43,6 +43,8 @@ void AddData(NodeP root, int data)
 	}
 
 	*p = CreateTreeWithData(data);
+
+	RefreshHeight(root);
 }
 
 bool FindData(NodeP root, int data)
