@@ -22,5 +22,7 @@ int main(){
 	bool f2 = FindData(n, 3);
 	bool f3 = FindData(n, 23);
 
+	ClearTree(n);
+
 	return 0;
 }

@@ -60,3 +60,13 @@ int RefreshHeight(NodeP root)
 	if (lMax >= rMax) return (root->height = lMax);
 	else return (root->height = rMax);
 }
+
+void ClearTree(NodeP root)
+{
+	if (root->left)
+		ClearTree(root->left);
+	if (root->right)
+		ClearTree(root->right);
+
+	free(root);
+}
